@@ -65,3 +65,7 @@ blockquote {
 	margin: 0px;
 	font-style: italic;
 }
+
+body::-webkit-scrollbar {
+    display: none;
+}
