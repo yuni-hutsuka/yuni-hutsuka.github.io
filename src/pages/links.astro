@@ -1,0 +1,34 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Card from '../components/Card.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+
+		<main>
+            <ul role="list" class="link-card-grid">
+                <Card
+                    href="https://twitter.com/yuni_hutsuka"
+                    title="Twitter"
+                    body="主に生息しているTwitter。まともな人間ではないので要注意。"
+                />
+                <Card
+                    href="https://github.com/yuni-hutsuka"
+                    title="GitHub"
+                    body="GitHubのアカウント。まともな開発はしていない。基本的に小説の倉庫みたいな扱いをしている。"
+                />
+            </ul>
+		</main>
+
+		<Footer />
+	</body>
+</html>
