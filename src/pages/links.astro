@@ -1,0 +1,46 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Card from '../components/Card.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+
+		<main>
+            <h2>Link Collection</h2>
+
+            <ul role="list" class="link-card-grid">
+                <Card
+                    href="https://twitter.com/yuni_hutsuka"
+                    title="Twitter"
+                    body="主に生息しているTwitter。まともな人間ではないので要注意。"
+                />
+                <Card
+                    href="https://github.com/yuni-hutsuka"
+                    title="GitHub"
+                    body="GitHubのアカウント。まともな開発はしていない。基本的に小説の倉庫みたいな扱いをしている。"
+                />
+                <Card
+                    href="https://www.pixiv.net/users/20509498"
+                    title="Pixiv"
+                    body="Pixivのアカウント。エヴァの二次創作小説を主に載せている。"
+                />
+                <Card
+                    href="https://kakuyomu.jp/users/yuni_hutsuka"
+                    title="カクヨム"
+                    body="カクヨムのアカウント。オリジナルのSF小説を投稿している。"
+                />
+            </ul>
+		</main>
+
+		<Footer />
+	</body>
+</html>
