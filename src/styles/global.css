@@ -10,11 +10,11 @@ body {
 	padding: 20px;
 	max-width: 65ch;
 	text-align: left;
-	background-color: #fff;
+	background-color: #0f2350;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	line-height: 1.5;
-	color: #444;
+	color: gray;
 }
 
 body::-webkit-scrollbar {
@@ -22,11 +22,11 @@ body::-webkit-scrollbar {
 }
 
 h1, h2, h3, h4, h5, h6, strong, b {
-	color: #222;
+	color: #c6ac4b;
 }
 
 a {
-	color: #3273dc;
+	color: #a22041;
 }
 
 nav a {
