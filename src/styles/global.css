@@ -5,12 +5,12 @@
  */
 
 body {
-	font-family: Verdana, sans-serif;
+    font-family: 'Shippori Mincho', serif;
 	margin: auto;
 	padding: 20px;
 	max-width: 65ch;
 	text-align: left;
-	background-color: #0f2350;
+	background-color: #110c26;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	line-height: 1.5;
