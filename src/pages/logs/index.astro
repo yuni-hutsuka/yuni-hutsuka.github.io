@@ -6,7 +6,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
 
-const posts = (await getCollection('blog')).sort(
+const posts = (await getCollection('logs')).sort(
 	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
 );
 ---
@@ -26,7 +26,7 @@ const posts = (await getCollection('blog')).sort(
 			ul li :global(time) {
 				flex: 0 0 130px;
 				font-style: italic;
-				color: gray;
+				color: #595959;
 			}
 			ul li a:visited {
 				color: #a22041;
@@ -36,14 +36,14 @@ const posts = (await getCollection('blog')).sort(
 	<body>
 		<Header />
 		<main>
-            <h2>Blogs</h2>
+            <h2>History</h2>
 			<section>
 				<ul>
 					{
 						posts.map((post) => (
 							<li>
 								<FormattedDate date={post.data.pubDate} />
-								<a href={`/blog/${post.slug}/`}>{post.data.title}</a>
+								<a href={`/logs/${post.slug}/`}>{post.data.title}</a>
 							</li>
 						))
 					}

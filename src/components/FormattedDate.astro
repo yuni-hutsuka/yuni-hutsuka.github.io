@@ -6,7 +6,7 @@ export interface Props {
 const { date } = Astro.props;
 ---
 
-<time datetime={date.toISOString()}>
+<time datetime={date.toISOString()} style="color: gray;">
 	{
 		date.toLocaleDateString('ja-JP-u-ca-japanese', {
 			year: 'numeric',
