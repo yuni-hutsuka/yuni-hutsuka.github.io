@@ -1,11 +1,9 @@
 ---
-title: "尻にVim/Neovimを合わせる"
+title: "尻に Vim/Neovim を合わせる"
 description: "以前zennに投稿した記事"
 pubDate: "4 13 2023"
 heroImage: "/placeholder-hero.jpg"
 ---
-
-# 尻に Vim/Neovim を合わせる
 
 ## はじめに
 
