@@ -3,34 +3,16 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-AstroPaper is a minimal, responsive and SEO-friendly Astro blog theme. I designed and crafted this based on [my personal blog](https://satnaing.dev/blog).
+初めまして。二日ゆにと申します。
 
-This theme is aimed to be accessible out of the box. Light and dark mode are supported by
-default and additional color schemes can also be configured.
+もしかするとお久しぶりです、の方が正しいかもしれません。あるいは単にこんにちはと声を掛けたほうが良いでしょうか。
 
-This theme is self-documented \_ which means articles/posts in this theme can also be considered as documentations. So, see the documentation for more info.
+昨今のインターネット事情は非常に混迷で、かつその動きは急速で落ち着く場所がないように感じられます。現にこの自己紹介を書いている時点で、Twitterの度重なるポリシー変更などによって混乱が発生しており、さらに言えば既にこの騒動は何度も起きている状況を鑑みれば、私の直感も間違ってはいないでしょう。
 
-<div>
-  <img src="/assets/dev.svg" class="sm:w-1/2 mx-auto" alt="coding dev illustration">
-</div>
+Pixivについても生成AIとの関わりが取り沙汰され、決してどのサービスについても安心が出来ない状態が続いています。私としても、一刻も早く、技術の進歩や、人々のモラルによってこの状況が改善してほしいと願っていますが、現実は非情、いついかなる時も備えが必要であると強く思うようになりました。
 
-## Tech Stack
+そこで、このサイトを立ち上げました。元々昔から、個人サイト、という言葉の響きに魅了され、古き良き作品群に育てられた人間です。憧れの自分のサイトを創るいい機会になりました。
 
-This theme is written in vanilla JavaScript (+ TypeScript for type checking) and a little bit of ReactJS for some interactions. TailwindCSS is used for styling; and Markdown is used for blog contents.
+そういったわけで、このサイトは私の作品や、二次創作や、あるいは日記のような物を綴っていこうと思います。更新は亀の歩みのようでしょうが、まぁそこはご容赦を。
 
-## Features
-
-Here are certain features of this site.
-
-- fully responsive and accessible
-- SEO-friendly
-- light & dark mode
-- fuzzy search
-- super fast performance
-- draft posts
-- pagination
-- sitemap & rss feed
-- highly customizable
-
-If you like this theme, you can star/contribute to the [repo](https://github.com/satnaing/astro-paper).  
-Or you can even give any feedback via my [email](mailto:contact@satnaing.dev).
+最後に。この時と情報の濁流の中で、あなたと出会えたことに感謝を。どうかあなたと私の出会いが、お互いにとって豊かなものであることを祈っています。
