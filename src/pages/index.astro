@@ -1,62 +1,159 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import { getCollection } from "astro:content";
+import Layout from "@layouts/Layout.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import LinkButton from "@components/LinkButton.astro";
+import Hr from "@components/Hr.astro";
+import Card from "@components/Card";
+import Socials from "@components/Socials.astro";
+import getSortedPosts from "@utils/getSortedPosts";
+import slugify from "@utils/slugify";
+import { SOCIALS } from "@config";
 
-import Layout from '../layouts/BlogPost.astro';
+const posts = await getCollection("blog");
 
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+const sortedPosts = getSortedPosts(posts);
+const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
+
+const socialCount = SOCIALS.filter(social => social.active).length;
 ---
 
-<!DOCTYPE html>
-<html lang="ja">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-            <Layout
-                title="書斎"
-                description="サイト紹介"
-                pubDate={new Date('April 08 2023')}
-                updatedDate={new Date('April 08 2023')}
-            >
-                <h3>前文</h3>
+<Layout>
+  <Header />
+  <main id="main-content">
+    <section id="hero">
+      <h1>Mingalaba</h1>
+      <a
+        target="_blank"
+        href="/rss.xml"
+        class="rss-link"
+        aria-label="rss feed"
+        title="RSS Feed"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="rss-icon"
+          ><path
+            d="M19 20.001C19 11.729 12.271 5 4 5v2c7.168 0 13 5.832 13 13.001h2z"
+          ></path><path
+            d="M12 20.001h2C14 14.486 9.514 10 4 10v2c4.411 0 8 3.589 8 8.001z"
+          ></path><circle cx="6" cy="18" r="2"></circle>
+        </svg>
+      </a>
 
-                <p>
-                    ようこそ。
-                    お越し頂き誠にありがとうございます。
-                </p>
-                <p>
-                    このサイトは私のブログ、小説、ポートフォリオなどを掲載しています。
-                    コンテンツはオリジナルSF小説、エヴァ二次創作等です。
-                </p>
+      <p>
+        AstroPaper is a minimal, responsive, accessible and SEO-friendly Astro
+        blog theme. This theme follows best practices and provides accessibility
+        out of the box. Light and dark mode are supported by default. Moreover,
+        additional color schemes can also be configured.
+      </p>
+      <p>
+        Read the blog posts or check
+        <LinkButton
+          className="hover:text-skin-accent underline underline-offset-4 decoration-dashed"
+          href="https://github.com/satnaing/astro-paper#readme"
+        >
+          README
+        </LinkButton> for more info.
+      </p>
+      {
+        // only display if at least one social link is enabled
+        socialCount > 0 && (
+          <div class="social-wrapper">
+            <div class="social-links">Social Links:</div>
+            <Socials />
+          </div>
+        )
+      }
+    </section>
 
-                <h3>サイト開設の経緯</h3>
+    <Hr />
 
-                <p>
-                    最近は便利なサイトが増え、ブログにしろ小説にしろ、あるいは絵や写真、呟きにいたっても整備されたプラットフォームが探せばある状態になりました。
-                    かつての古臭いインターネットから、少しずつ万人に使いやすい形へ変化することで、多くの人に創作、情報の門戸を開くことが出来るというのは、実に喜ばしいことです。
-                </p>
-                <p>
-                    ただし、古い作品（事実、エヴァは悲しいかな古い作品の一つであると思います）の二次創作は、主にそういった古い時代のインターネットに残されています。
-                    僕はそういった時代の遺産を摂取して育ちました。
-                    あの時代の空気が好きで、出来ればいつかそうやって個人サイトを持ちたい、とずっと思っていました。
-                </p>
-                <p>
-                    過去にも一度、自作のサイトを公開したことがありますが、残念ながら長続きはしませんでした。
-                    それは、まだ技術面の知識がなかったこと、それを補うほどの活力を自作サイトの運営に向けられなかった事が原因でした。
-                    今回はそうならないように、ある程度整備された環境を整えたので、きっと（たぶん）長続きするはずです。
-                </p>
-                <p>
-                    最後に、このサイトを見つけて下さった貴方に限りない感謝を。
-                    楽しんで頂ければ幸いです。
-                </p>
+    {
+      featuredPosts.length > 0 && (
+        <>
+          <section id="featured">
+            <h2>Featured</h2>
+            <ul>
+              {featuredPosts.map(({ data }) => (
+                <Card
+                  href={`/posts/${slugify(data)}`}
+                  frontmatter={data}
+                  secHeading={false}
+                />
+              ))}
+            </ul>
+          </section>
+          <Hr />
+        </>
+      )
+    }
 
-                <h3>Static Site Generator</h3>
-                <p>
-                    このサイトは、静的サイトジェネレータ Astro を用いて作成しています。
-                </p>
-            </Layout>
-		</main>
-	</body>
-</html>
+    <section id="recent-posts">
+      <h2>Recent Posts</h2>
+      <ul>
+        {
+          sortedPosts.map(
+            ({ data }, index) =>
+              index < 4 && (
+                <Card
+                  href={`/posts/${slugify(data)}`}
+                  frontmatter={data}
+                  secHeading={false}
+                />
+              )
+          )
+        }
+      </ul>
+      <div class="all-posts-btn-wrapper">
+        <LinkButton href="/posts">
+          All Posts
+          <svg xmlns="http://www.w3.org/2000/svg"
+            ><path
+              d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
+            ></path>
+          </svg>
+        </LinkButton>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  /* ===== Hero Section ===== */
+  #hero {
+    @apply pb-6 pt-8;
+  }
+  #hero h1 {
+    @apply my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl;
+  }
+  #hero .rss-link {
+    @apply mb-6;
+  }
+  #hero .rss-icon {
+    @apply mb-2 h-6 w-6 scale-110 fill-skin-accent sm:mb-3 sm:scale-125;
+  }
+  #hero p {
+    @apply my-2;
+  }
+  .social-wrapper {
+    @apply mt-4 flex flex-col sm:flex-row sm:items-center;
+  }
+  .social-links {
+    @apply mb-1 mr-2 whitespace-nowrap sm:mb-0;
+  }
+
+  /* ===== Featured & Recent Posts Sections ===== */
+  #featured,
+  #recent-posts {
+    @apply pb-6 pt-12;
+  }
+  #featured h2,
+  #recent-posts h2 {
+    @apply text-2xl font-semibold tracking-wide;
+  }
+  .all-posts-btn-wrapper {
+    @apply my-8 text-center;
+  }
+</style>
