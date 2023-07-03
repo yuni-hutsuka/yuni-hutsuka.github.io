@@ -5,7 +5,7 @@ export const SITE: Site = {
   author: "Yuni Hutsuka",
   desc: "Yuni's website.",
   title: "YuniSanctorum",
-  ogImage: "astropaper-og.jpg",
+  ogImage: "og.png",
   lightAndDarkMode: true,
   postPerPage: 3,
 };
