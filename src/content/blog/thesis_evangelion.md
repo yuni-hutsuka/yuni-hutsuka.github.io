@@ -1,10 +1,10 @@
 ---
 author: Yuni Hutsuka
 pubDatetime: 2023-07-04
-title: "WIP: 2000年生まれによる『新世紀エヴァンゲリオン』に対する調査と考察 -1995年の創世-"
-postSlug: thesis-eva
+title: "『新世紀エヴァンゲリオン』に対する調査と考察 ― 1995年の創世"
+postSlug: thesis-evangelion
 featured: true
-draft: false
+draft: true
 tags:
   - thesis-論文
   - criticism-評論
@@ -14,6 +14,8 @@ description: "新世紀エヴァンゲリオンを布教する為の記事"
 ---
 
 ## Table of Contents
+
+> Work In Progress!!!
 
 ## 概要
 

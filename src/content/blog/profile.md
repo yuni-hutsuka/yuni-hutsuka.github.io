@@ -2,7 +2,7 @@
 author: Yuni Hutsuka
 pubDatetime: 2023-07-03T00:00:00Z
 title: 二日ゆに概説
-postSlug: introduction-of-yuni-hutsuka
+postSlug: profile
 featured: true
 draft: false
 tags:
@@ -14,4 +14,24 @@ description:
 
 ## Table of contents
 
-## 自己紹介
+> Work In Progress!!!
+
+## Introduction
+
+## Information
+
+| Property | Value |
+| --- | --- |
+| ペンネーム | 二日 ゆに |
+| 出身 | 神奈川県 |
+| 身分 | 大学院生 |
+| 性別 | 男性 |
+| 生年月日 | 2000 年 5 月 13 日 |
+
+## Favorite...
+
+### Anime
+### Manga
+### Novel
+### Movie
+### Others
