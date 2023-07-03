@@ -121,13 +121,13 @@ const options: SatoriOptions = {
   embedFont: false,
   fonts: [
     {
-      name: "IBM Plex Mono",
+      name: "Sawarabi Gothic",
       data: fontRegular,
       weight: 400,
       style: "normal",
     },
     {
-      name: "IBM Plex Mono",
+      name: "Sawarabi Gothic",
       data: fontBold,
       weight: 600,
       style: "normal",
