@@ -16,7 +16,7 @@ description: 映画『インディ・ジョーンズと運命のダイヤル』�
 > ATTENSION SPOILER!!!
 > ネタばれ大注意!!!
 
-> この記事は[Note](https://www.note.com)にも同時投稿しています
+> この記事は[Note](https://note.com/yuni_hutsuka/n/n6dad96e34e32)にも同時投稿しています
 
 ## Table of contents
 
