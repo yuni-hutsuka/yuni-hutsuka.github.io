@@ -1,6 +1,6 @@
 ---
 author: Yuni Hutsuka
-pubDatetime: 2023-07-40T00:00:00Z
+pubDatetime: 2023-07-19T00:00:00Z
 title: 映画『君たちはどう生きるか』に対する回答
 postSlug: the-boy-and-the-heron-1st-impression
 featured: true
@@ -16,7 +16,7 @@ description: 映画『君たちはどう生きるか』について、その感�
 > ATTENSION SPOILER!!!
 > ネタばれ大注意!!!
 
-<!-- > この記事は[Note](https://note.com/yuni_hutsuka/n/n6dad96e34e32)にも同時投稿しています -->
+> この記事は[Note](https://note.com/yuni_hutsuka/n/nd034d7481d26)にも同時投稿しています
 
 ## Table of contents
 
