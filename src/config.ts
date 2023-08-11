@@ -1,10 +1,10 @@
 import type { Site, SocialObjects } from "./types";
 
 export const SITE: Site = {
-  website: "https://yuni-hutsuka.github.io/",
+  website: "https://amanoji-studio.com",
   author: "Yuni Hutsuka",
   desc: "Yuni's website.",
-  title: "YuniSanctorum",
+  title: "Stduio Amanoji",
   ogImage: "og.png",
   lightAndDarkMode: true,
   postPerPage: 3,
@@ -22,7 +22,7 @@ export const LOGO_IMAGE = {
 export const SOCIALS: SocialObjects = [
   {
     name: "Mail",
-    href: "mailto:yuni.wille999@gmail.com",
+    href: "mailto:yuni.hutsuka@amanoji-studio.com",
     linkTitle: `Send an email to Yuni Hutsuka`,
     active: true,
   },
