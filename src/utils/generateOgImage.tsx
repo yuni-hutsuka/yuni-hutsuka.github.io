@@ -6,13 +6,13 @@ import { Resvg } from "@resvg/resvg-js";
 const fetchFonts = async () => {
   // Regular Font
   const fontFileRegular = await fetch(
-    "https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap"
+    "https://fonts.googleapis.com/css2?family=Kiwi+Maru&text"
   );
   const fontRegular: ArrayBuffer = await fontFileRegular.arrayBuffer();
 
   // Bold Font
   const fontFileBold = await fetch(
-    "https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display"
+    "https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&text"
   );
   const fontBold: ArrayBuffer = await fontFileBold.arrayBuffer();
 
