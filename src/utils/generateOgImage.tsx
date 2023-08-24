@@ -6,13 +6,13 @@ import { Resvg } from "@resvg/resvg-js";
 const fetchFonts = async () => {
   // Regular Font
   const fontFileRegular = await fetch(
-    "https://fonts.googleapis.com/css2?family=Kiwi+Maru&text"
+    "https://www.1001fonts.com/download/font/ibm-plex-mono.regular.ttf"
   );
   const fontRegular: ArrayBuffer = await fontFileRegular.arrayBuffer();
 
   // Bold Font
   const fontFileBold = await fetch(
-    "https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&text"
+    "https://www.1001fonts.com/download/font/ibm-plex-mono.bold.ttf"
   );
   const fontBold: ArrayBuffer = await fontFileBold.arrayBuffer();
 
@@ -118,16 +118,16 @@ const ogImage = (text: string) => {
 const options: SatoriOptions = {
   width: 1200,
   height: 630,
-  embedFont: false,
+  embedFont: true,
   fonts: [
     {
-      name: "KiwiMaru",
+      name: "IBM Plex Mono",
       data: fontRegular,
       weight: 400,
       style: "normal",
     },
     {
-      name: "KiwiMaru",
+      name: "IBM Plex Mono",
       data: fontBold,
       weight: 600,
       style: "normal",
