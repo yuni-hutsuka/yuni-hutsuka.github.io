@@ -2,6 +2,7 @@ import satori, { SatoriOptions } from "satori";
 import { SITE } from "@config";
 import { writeFile } from "node:fs/promises";
 import { Resvg } from "@resvg/resvg-js";
+import { ShipporiMincho } from "../assets/ShipporiMinchoB1-Regular.ttf";
 
 const fetchFonts = async () => {
   // Regular Font
@@ -121,14 +122,14 @@ const options: SatoriOptions = {
   embedFont: false,
   fonts: [
     {
-      name: "Sawarabi Gothic",
-      data: fontRegular,
+      name: "ShipporiMincho",
+      data: Buffer.from(ShipporiMincho),
       weight: 400,
       style: "normal",
     },
     {
-      name: "Sawarabi Gothic",
-      data: fontBold,
+      name: "ShipporiMincho",
+      data: Buffer.from(ShipporiMincho),
       weight: 600,
       style: "normal",
     },
