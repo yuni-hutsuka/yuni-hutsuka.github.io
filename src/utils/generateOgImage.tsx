@@ -7,13 +7,11 @@ const siteDomainName = "amanoji-studio.com";
 const fontFamily = "Kiwi Maru";
 
 async function fetchFont(
-  text: string,
+  // text: string,
   font: string,
   weight: number
 ): Promise<ArrayBuffer> {
-  const API = `https://fonts.googleapis.com/css2?family=${font}:wght@${weight}&text=${encodeURIComponent(
-    text
-  )}`;
+  const API = `https://fonts.googleapis.com/css2?family=${font}:wght@${weight}`;
 
   const css = await (
     await fetch(API, {
@@ -39,8 +37,8 @@ async function fetchFont(
 }
 
 const ogImage = async (text: string) => {
-  const fontRegular = await fetchFont(SITE + siteDomainName, fontFamily, 400);
-  const fontBold = await fetchFont(text, fontFamily, 700);
+  const fontRegular = await fetchFont(fontFamily, 300);
+  const fontBold = await fetchFont(fontFamily, 500);
 
   const svg = await satori(
     <div
@@ -120,14 +118,10 @@ const ogImage = async (text: string) => {
               >
                 "
               </span>
-              <span style={{ overflow: "hidden", fontWeight: "bold" }}>
-                {SITE.author}
-              </span>
+              <span style={{ fontWeight: "normal" }}>{SITE.author}</span>
             </span>
 
-            <span style={{ overflow: "hidden", fontWeight: "bold" }}>
-              {SITE.title}
-            </span>
+            <span style={{ fontWeight: "normal" }}>{SITE.title}</span>
           </div>
         </div>
       </div>
@@ -135,18 +129,18 @@ const ogImage = async (text: string) => {
     {
       width: 1200,
       height: 630,
-      embedFont: true,
+      // embedFont: true,
       fonts: [
         {
-          name: "IBM Plex Mono",
+          name: "Kiwi Maru",
           data: fontRegular,
-          weight: 400,
+          weight: 300,
           style: "normal",
         },
         {
-          name: "IBM Plex Mono",
+          name: "Kiwi Maru",
           data: fontBold,
-          weight: 600,
+          weight: 500,
           style: "normal",
         },
       ],
