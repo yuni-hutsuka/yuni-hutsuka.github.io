@@ -3,8 +3,6 @@ import { SITE } from "@config";
 import { writeFile } from "node:fs/promises";
 import { Resvg } from "@resvg/resvg-js";
 
-import ShipporiMincho from "../assets/ShipporiMinchoB1-Regular.ttf";
-
 const fetchFonts = async () => {
   // Regular Font
   const fontFileRegular = await fetch("../assets/KiwiMaru-Regular.ttf");
@@ -119,14 +117,14 @@ const options: SatoriOptions = {
   embedFont: false,
   fonts: [
     {
-      name: "ShipporiMinchoB1",
-      data: Buffer.from(ShipporiMincho),
+      name: "KiwiMaru",
+      data: fontRegular,
       weight: 400,
       style: "normal",
     },
     {
-      name: "ShipporiMinchoB1",
-      data: Buffer.from(ShipporiMincho),
+      name: "KiwiMaru",
+      data: fontBold,
       weight: 600,
       style: "normal",
     },
