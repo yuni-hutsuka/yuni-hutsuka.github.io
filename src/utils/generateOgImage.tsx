@@ -3,26 +3,46 @@ import { SITE } from "@config";
 import { writeFile } from "node:fs/promises";
 import { Resvg } from "@resvg/resvg-js";
 
-const fetchFonts = async () => {
-  // Regular Font
-  const fontFileRegular = await fetch(
-    "https://fonts.googleapis.com/css2?family=Kiwi+Maru&text"
+const siteDomainName = "amanoji-studio.com";
+const fontFamily = "Kiwi Maru";
+
+async function fetchFont(
+  text: string,
+  font: string,
+  weight: number
+): Promise<ArrayBuffer> {
+  const API = `https://fonts.googleapis.com/css2?family=${font}:wght@${weight}&text=${encodeURIComponent(
+    text
+  )}`;
+
+  const css = await (
+    await fetch(API, {
+      headers: {
+        // Make sure it returns TTF.
+        "User-Agent":
+          "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_8; de-at) AppleWebKit/533.21.1 (KHTML, like Gecko) Version/5.0.5 Safari/533.21.1",
+      },
+    })
+  ).text();
+
+  const resource = css.match(
+    /src: url\((.+)\) format\('(opentype|truetype)'\)/
   );
-  const fontRegular: ArrayBuffer = await fontFileRegular.arrayBuffer();
 
-  // Bold Font
-  const fontFileBold = await fetch(
-    "https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&text"
-  );
-  const fontBold: ArrayBuffer = await fontFileBold.arrayBuffer();
+  if (!resource) {
+    throw new Error("Failed to fetch font");
+  }
 
-  return { fontRegular, fontBold };
-};
+  const res = await fetch(resource[1]);
 
-const { fontRegular, fontBold } = await fetchFonts();
+  return res.arrayBuffer();
+}
 
-const ogImage = (text: string) => {
-  return (
+const ogImage = async (text: string) => {
+  const fontRegular = await fetchFont(SITE + siteDomainName, fontFamily, 400);
+  const fontBold = await fetchFont(text, fontFamily, 700);
+
+  const svg = await satori(
     <div
       style={{
         background: "#fefbfb",
@@ -111,32 +131,33 @@ const ogImage = (text: string) => {
           </div>
         </div>
       </div>
-    </div>
+    </div>,
+    {
+      width: 1200,
+      height: 630,
+      embedFont: true,
+      fonts: [
+        {
+          name: "IBM Plex Mono",
+          data: fontRegular,
+          weight: 400,
+          style: "normal",
+        },
+        {
+          name: "IBM Plex Mono",
+          data: fontBold,
+          weight: 600,
+          style: "normal",
+        },
+      ],
+    }
   );
-};
 
-const options: SatoriOptions = {
-  width: 1200,
-  height: 630,
-  embedFont: false,
-  fonts: [
-    {
-      name: "KiwiMaru",
-      data: fontRegular,
-      weight: 400,
-      style: "normal",
-    },
-    {
-      name: "KiwiMaru",
-      data: fontBold,
-      weight: 600,
-      style: "normal",
-    },
-  ],
+  return svg;
 };
 
 const generateOgImage = async (mytext = SITE.title) => {
-  const svg = await satori(ogImage(mytext), options);
+  const svg = await ogImage(mytext);
 
   // render png in production mode
   if (import.meta.env.MODE === "production") {
