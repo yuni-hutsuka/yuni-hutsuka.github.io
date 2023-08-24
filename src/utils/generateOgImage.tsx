@@ -5,11 +5,15 @@ import { Resvg } from "@resvg/resvg-js";
 
 const fetchFonts = async () => {
   // Regular Font
-  const fontFileRegular = await fetch("../assets/KiwiMaru-Regular.ttf");
+  const fontFileRegular = await fetch(
+    "https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap"
+  );
   const fontRegular: ArrayBuffer = await fontFileRegular.arrayBuffer();
 
   // Bold Font
-  const fontFileBold = await fetch("../assets/KiwiMaru-Medium.ttf");
+  const fontFileBold = await fetch(
+    "https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display"
+  );
   const fontBold: ArrayBuffer = await fontFileBold.arrayBuffer();
 
   return { fontRegular, fontBold };
