@@ -2,7 +2,8 @@ import satori, { SatoriOptions } from "satori";
 import { SITE } from "@config";
 import { writeFile } from "node:fs/promises";
 import { Resvg } from "@resvg/resvg-js";
-import { ShipporiMincho } from "../assets/ShipporiMinchoB1-Regular.ttf";
+
+import ShipporiMincho from "../assets/ShipporiMinchoB1-Regular.ttf";
 
 const fetchFonts = async () => {
   // Regular Font
