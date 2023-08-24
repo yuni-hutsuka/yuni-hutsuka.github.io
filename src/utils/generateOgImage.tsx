@@ -122,13 +122,13 @@ const options: SatoriOptions = {
   embedFont: false,
   fonts: [
     {
-      name: "ShipporiMincho",
+      name: "ShipporiMinchoB1",
       data: Buffer.from(ShipporiMincho),
       weight: 400,
       style: "normal",
     },
     {
-      name: "ShipporiMincho",
+      name: "ShipporiMinchoB1",
       data: Buffer.from(ShipporiMincho),
       weight: 600,
       style: "normal",
