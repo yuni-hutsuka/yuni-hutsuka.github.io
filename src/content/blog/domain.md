@@ -3,7 +3,7 @@ author: Yuni Hutsuka
 pubDatetime: 2023-09-07T18:00:00Z
 title: ドメインを弄るのに苦労した話
 postSlug: domain_turai
-featured: true
+featured: false
 draft: false
 tags:
   - blog-ブログ
