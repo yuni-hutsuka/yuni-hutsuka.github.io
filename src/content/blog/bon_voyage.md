@@ -3,7 +3,7 @@ author: Yuni Hutsuka
 pubDatetime: 2023-09-14T18:50:00Z
 title: Bonコマンドを作った話
 postSlug: bon-voyage
-featured: true
+featured: false
 draft: false
 tags:
   - blog-ブログ
