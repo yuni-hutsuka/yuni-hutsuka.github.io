@@ -3,7 +3,7 @@ author: Yuni Hutsuka
 pubDatetime: 2023-08-17T00:00:00Z
 title: アマテラス - タスク管理手法の提案
 postSlug: thesis_amaterasu_task
-featured: true
+featured: false
 draft: false
 tags:
   - thesis-論文
