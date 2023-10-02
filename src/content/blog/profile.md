@@ -1,7 +1,7 @@
 ---
 author: Yuni Hutsuka
 pubDatetime: 2023-07-03T00:00:00Z
-title: 二日ゆに概説
+title: 自己紹介 - 二日ゆに
 postSlug: profile
 featured: true
 draft: false
