@@ -3,7 +3,7 @@ author: Yuni Hutsuka
 pubDatetime: 2023-08-21T00:00:00Z
 title: 冬コミに申し込みました。
 postSlug: c103_declaration
-featured: true
+featured: false
 draft: false
 tags:
   - blog-ブログ
