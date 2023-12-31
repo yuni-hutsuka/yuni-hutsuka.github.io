@@ -1,6 +1,6 @@
 ---
 author: Yuni Hutsuka
-pubDatetime: 2023-12-06
+pubDatetime: 2023-12-31
 title: C103 コミケレポと軽い今年の振り返り
 postSlug: c103-report
 featured: true
