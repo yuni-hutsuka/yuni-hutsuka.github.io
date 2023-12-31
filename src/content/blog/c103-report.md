@@ -86,4 +86,4 @@ description: 冬コミにサークル参加した話と今年の軽い振り返�
 
 それでは皆さま、よいお年を～。
 
-<img src="../../public/images/shomei.png" width=25% height=25% />
+<img src="https://amaterath.com/public/images/shomei.png" width=25% height=25% />
