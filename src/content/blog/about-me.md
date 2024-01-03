@@ -15,6 +15,8 @@ description: 二日ゆに個人に焦点を当てた自己紹介ページ。
 
 ## Information - 情報
 
+![icon](@assets/images/icon.png)
+
 | Property   | Value              |
 | ---------- | ------------------ |
 | ペンネーム | 二日 ゆに          |
