@@ -1,6 +1,6 @@
 ---
 author: Yuni Hutsuka
-pubDatetime: 2024-01-04T00:00:00+09:00
+pubDatetime: 2024-01-04T00:00:00.400Z
 title: 新年の抱負
 postSlug: 2024-planning
 featured: true

@@ -1,6 +1,6 @@
 ---
 author: Yuni Hutsuka
-pubDatetime: 2023-07-19T00:00:00Z
+pubDatetime: 2023-07-19T00:00:00.400Z
 title: 映画『君たちはどう生きるか』に対する回答
 postSlug: the-boy-and-the-heron-1st-impression
 featured: false
