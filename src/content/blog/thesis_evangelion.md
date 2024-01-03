@@ -1,6 +1,6 @@
 ---
 author: Yuni Hutsuka
-pubDatetime: 2023-07-04
+pubDatetime: 2023-07-04T00:00:00.400Z
 title: "『新世紀エヴァンゲリオン』に対する調査と考察 ― 1995年の創世"
 postSlug: thesis-evangelion
 featured: false
