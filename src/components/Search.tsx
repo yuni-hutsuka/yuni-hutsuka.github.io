@@ -1,13 +1,13 @@
 import Fuse from "fuse.js";
 import { useEffect, useRef, useState, useMemo } from "react";
 import Card from "@components/Card";
-import slugify from "@utils/slugify";
-import type { BlogFrontmatter } from "@content/_schemas";
+import type { CollectionEntry } from "astro:content";
 
 export type SearchItem = {
   title: string;
   description: string;
-  data: BlogFrontmatter;
+  data: CollectionEntry<"blog">["data"];
+  slug: string;
 };
 
 interface Props {
@@ -67,9 +67,9 @@ export default function SearchBar({ searchList }: Props) {
       searchParams.set("q", inputVal);
       const newRelativePathQuery =
         window.location.pathname + "?" + searchParams.toString();
-      history.replaceState(null, "", newRelativePathQuery);
+      history.replaceState(history.state, "", newRelativePathQuery);
     } else {
-      history.replaceState(null, "", window.location.pathname);
+      history.replaceState(history.state, "", window.location.pathname);
     }
   }, [inputVal]);
 
@@ -111,9 +111,9 @@ export default function SearchBar({ searchList }: Props) {
         {searchResults &&
           searchResults.map(({ item, refIndex }) => (
             <Card
-              href={`/posts/${slugify(item.data)}`}
+              href={`/posts/${item.slug}`}
               frontmatter={item.data}
-              key={`${refIndex}-${slugify(item.data)}`}
+              key={`${refIndex}-${item.slug}`}
             />
           ))}
       </ul>
