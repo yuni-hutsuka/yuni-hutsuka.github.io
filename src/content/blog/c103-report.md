@@ -1,6 +1,6 @@
 ---
 author: Yuni Hutsuka
-pubDatetime: 2023-12-31
+pubDatetime: 2023-12-31T16:00:00+09:00
 title: C103 コミケレポと軽い今年の振り返り
 postSlug: c103-report
 featured: true
@@ -86,4 +86,4 @@ description: 冬コミにサークル参加した話と今年の軽い振り返�
 
 それでは皆さま、よいお年を～。
 
-<img src="https://amaterath.com/public/images/shomei.png" width=25% height=25% />
+![shomei](../../public/images/shomei.png)

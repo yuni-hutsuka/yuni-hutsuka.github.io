@@ -1,6 +1,6 @@
 ---
 author: Yuni Hutsuka
-pubDatetime: 2023-07-03T00:00:00Z
+pubDatetime: 2023-07-03T00:00:00+09:00
 title: 自己紹介 - 二日ゆに
 postSlug: about-me
 featured: true
@@ -15,7 +15,7 @@ description: 二日ゆに個人に焦点を当てた自己紹介ページ。
 
 ## Information - 情報
 
-<img src="https://amaterath.com/public/images/icon.png" width=25% height=25% />
+![icon](../../../public/images/icon.png)
 
 | Property   | Value        |
 | ---------- | ------------ |
@@ -43,4 +43,4 @@ description: 二日ゆに個人に焦点を当てた自己紹介ページ。
 2019 年から某大学情報科学科において情報科学を学び始めた。
 
 決して真面目な学生ではなく、自らが楽しいと感じた勉学とは呼べないコンピュータの諸要素に触れ続けている。
-Rust によるコマンドラインツールの作成や、LaTeX のスタイルファイルの作成、unixporn や NixOS などに親しんでいる。
+Rust によるコマンドラインツールの作成や、LaTeX のスタイルファイルの作成、unixporn などに親しんでいる。
