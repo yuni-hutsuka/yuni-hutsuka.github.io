@@ -15,7 +15,7 @@ description: 二日ゆに個人に焦点を当てた自己紹介ページ。
 
 ## Information - 情報
 
-![icon](../../../public/images/icon.png)
+![icon](../../assets/images/icon.png)
 
 | Property   | Value        |
 | ---------- | ------------ |
