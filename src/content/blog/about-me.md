@@ -1,6 +1,6 @@
 ---
 author: Yuni Hutsuka
-pubDatetime: 2023-07-03T00:00:00+09:00
+pubDatetime: 2023-07-03T00:00:00.400Z
 title: 自己紹介 - 二日ゆに
 postSlug: about-me
 featured: true
