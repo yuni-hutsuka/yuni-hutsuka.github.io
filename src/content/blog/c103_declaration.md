@@ -1,6 +1,6 @@
 ---
 author: Yuni Hutsuka
-pubDatetime: 2023-08-21T00:00:00Z
+pubDatetime: 2023-08-21T00:00:00.400Z
 title: 冬コミに申し込みました。
 postSlug: c103_declaration
 featured: false

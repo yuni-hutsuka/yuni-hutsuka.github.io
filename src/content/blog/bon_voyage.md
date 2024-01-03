@@ -1,6 +1,6 @@
 ---
 author: Yuni Hutsuka
-pubDatetime: 2023-09-14T18:50:00Z
+pubDatetime: 2023-09-14T18:50:00.400Z
 title: Bonコマンドを作った話
 postSlug: bon-voyage
 featured: false
