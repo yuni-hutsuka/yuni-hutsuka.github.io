@@ -2,7 +2,7 @@
 author: Yuni Hutsuka
 pubDatetime: 2023-07-17T00:00:00.400Z
 title: 映画『インディ・ジョーンズと運命のダイヤル』への感想
-postSlug: Indiana-Jones-5th-1st-Impression
+slug: Indiana-Jones-5th-1st-Impression
 featured: false
 draft: false
 tags:
