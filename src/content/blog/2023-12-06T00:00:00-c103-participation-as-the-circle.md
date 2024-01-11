@@ -2,7 +2,7 @@
 author: Yuni Hutsuka
 pubDatetime: 2023-12-06T00:00:00.400Z
 title: 冬コミサークル参加します
-postSlug: c103-participation-as-the-circle
+slug: c103-participation-as-the-circle
 featured: false
 draft: false
 tags:
