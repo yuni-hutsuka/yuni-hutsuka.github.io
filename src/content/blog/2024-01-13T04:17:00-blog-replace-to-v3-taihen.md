@@ -2,7 +2,7 @@
 author: Yuni Hutsuka
 pubDatetime: 2024-01-13T04:17:00.400Z
 title: AstroPaper v3への移行が大変だった話。
-slug: about-me
+slug: replace-to-astro-v3
 featured: false
 draft: false
 tags:
